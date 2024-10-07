@@ -12,5 +12,25 @@
 
 </head>
 <body>
+    <button class="reset-button" onclick="reset()"></button>
+    <h1>Random Name Generator</h1>
+    
+    <div class="main-container">
+        <div class="container">
+            <div id="name-display">Pop the winner!</div>
+            <div class="input-container">
+                <input type="text" id="name-input" maxlength="10" placeholder="Max 10 letters">
+                <button onclick="addName()">Add Name</button>
+            </div>
+            <button class="image-button" onclick="generateRandomName()"></button>
+        </div>
+        
+        <div id="name-list">
+            <h2>Names Entered:</h2>
+            <ul id="name-list-ul">
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
