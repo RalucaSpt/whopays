@@ -17,3 +17,155 @@ body {
     text-align: center;
     overflow: scroll;
 }
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #51518E;
+}
+
+div.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 20px;
+}
+
+.container{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #9c89b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+#name-display {
+    font-size: 24px;
+    margin: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 10px;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.image-button {
+    background: url('pictures/button-normal.png') no-repeat center;
+    width: 200px;
+    height: 100px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-size:contain;
+    transition: transform 0.1s ease-in-out;
+}
+
+.input-container button:hover, .image-button:hover,.balloon:hover, .reset-button:hover {
+    transform: scale(1.1);
+}
+
+.image-button:active {
+    transform: scale(0.9);
+    background: url('pictures/button-pressed.png') no-repeat center;
+    background-size:contain;
+}
+
+.balloon {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 120px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.balloon img {
+    width: 100%;
+    height: 100%;
+}
+
+.balloon .name {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-stretch: condensed;
+}
+
+#name-list{
+    border: #51518E 2px solid;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #51518E;
+    background-color: rgba(255, 255, 255, 0.335);
+}
+#name-list-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#name-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.explode {
+    animation: explode 0.5s ease-out forwards;
+}
+
+.reset-button{
+    margin-top: 20px;
+    background: url('pictures/reset.png') no-repeat center;
+    width: 200px;
+    height: 100px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-size:contain;
+    transition: transform 0.1s ease-in-out;
+}
+
+
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    div.main-container {
+        grid-template-columns: 1fr;
+    }
+}
