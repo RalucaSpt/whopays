@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Image Animation</title>
+    <style>
+        /* Stilizare generală pentru body */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Stilizarea butonului */
+        .image-button {
+            background: url('button-normal.png') no-repeat center;
+            width: 200px;
+            height: 100px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            background-size: cover;
+            transition: transform 0.1s ease-in-out;
+        }
+
+        /* Imaginea pentru starea apăsată */
+        .image-button:active {
+            background: url('button-pressed.png') no-repeat center;
+            background-size: cover;
+            transform: translateY(5px); /* Simulează efectul de apăsare */
+        }
+
+        /* Imaginea la hover (opțional, pentru un efect suplimentar) */
+        .image-button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <button class="image-button"></button>
+
+</body>
+</html>

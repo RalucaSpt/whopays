@@ -39,13 +39,13 @@ function addName() {
     }
 }
 
-function generateRandomName() {
+function chooseRandomName() {
     if (names.length > 0) {
         const randomIndex = Math.floor(Math.random() * names.length);
         const randomName = names[randomIndex];
 
         const nameDisplay = document.getElementById('name-display');
-        nameDisplay.innerText = "Generated Name: " + randomName;
+        nameDisplay.innerText = "Winner: " + randomName;
 
         const balloon = document.querySelector(`[data-index='${randomIndex}']`);
         if (balloon) {
@@ -59,7 +59,7 @@ function generateRandomName() {
 
         names.splice(randomIndex, 1);
     } else {
-        alert("No more names to generate!");
+        alert("No more names to pick!");
     }
 }
 
